@@ -3,7 +3,13 @@ name = "timepls"
 version = "0.1.0"
 authors = ["Jacek Chmiel <jacek@chmiel.cc>"]
 edition = "2018"
-description = "Converts unix timestamps to human readable date"
+description = """
+Converts unix timestamps to human readable date. Accepts json values (newline separated)
+and replaces all whole number values under one of following keys: "t", "ts", "time",
+"timestamp". Optionally, can process data in format: `TIMESTAMP OTHER_DATA` (space
+separated timestamp header in each line). If OTHER_DATA is valid json value, default
+replacement logic will be applied.
+"""
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
